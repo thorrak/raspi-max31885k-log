@@ -56,6 +56,7 @@ while True:
                                                   temp_c, temp_f, outlet_powered())
     f.write(log_string)
     print(log_string[:(log_string.__len__()-1)])
+    i=i+1
     time.sleep(1)
 
 f.close()
