@@ -43,13 +43,13 @@ def read_temp():
 
 # Ok, now let's set up the main loop
 i = 0
-fname = "{0}.txt".format(datetime.date.now().strftime("%Y%m%d-%H%M%S"))
+fname = "{0}.txt".format(datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 f = open(fname, 'w')
 f.write("Loop,Date,Time,Temp_C,Temp_F,Powered\n")
 while True:
     temp_c, temp_f = read_temp()
 
-    today_date = datetime.date.now()
+    today_date = datetime.datetime.now()
 
     # The log string is {Loop},{Date},{Time},{Temp_C},{Temp_F},{Powered}
     log_string = "{0},{1},{2},{3},{4},{5}\n".format(i, today_date.strftime("%Y-%m-%d"), today_date.strftime("%H:%M:%S"),
