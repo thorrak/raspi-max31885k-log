@@ -43,7 +43,7 @@ def read_temp():
 
 # Ok, now let's set up the main loop
 i = 0
-fname = "{0}.txt".format(datetime.date.today().strftime("%Y%m%d-%H%M%S"))
+fname = "{0}.txt".format(datetime.date.now().strftime("%Y%m%d-%H%M%S"))
 f = open(fname, 'w')
 f.write("Loop,Date,Time,Temp_C,Temp_F,Powered\n")
 while True:
