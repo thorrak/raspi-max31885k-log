@@ -4,12 +4,13 @@ import time
 
 
 # Set the mode of numbering the pins.
-GPIO.setmode(GPIO.BOARD) 
+# GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 # GPIO pin 10 is the output.
 # GPIO.setup(10, GPIO.OUT)
 # GPIO pin 8 is the input.
-GPIO.setup(6, GPIO.IN)
+GPIO.setup(6, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 # # Initialise GPIO10 to high (true) so that the LED is off.
 # GPIO.output(10, True)
