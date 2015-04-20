@@ -49,7 +49,7 @@ f.write("Loop,Date,Time,Temp_C,Temp_F,Powered\n")
 while True:
     temp_c, temp_f = read_temp()
 
-    today_date = datetime.date.today()
+    today_date = datetime.date.now()
 
     # The log string is {Loop},{Date},{Time},{Temp_C},{Temp_F},{Powered}
     log_string = "{0},{1},{2},{3},{4},{5}\n".format(i, today_date.strftime("%Y-%m-%d"), today_date.strftime("%H:%M:%S"),
