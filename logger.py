@@ -52,9 +52,10 @@ while True:
     today_date = datetime.date.today()
 
     # The log string is {Loop},{Date},{Time},{Temp_C},{Temp_F},{Powered}
-    log_string = "{0},{1},{2},{3},{4},{5}".format(i, today_date.strftime("%Y-%m-%d"), today_date.strftime("%H:%M:%S"),
+    log_string = "{0},{1},{2},{3},{4},{5}\n".format(i, today_date.strftime("%Y-%m-%d"), today_date.strftime("%H:%M:%S"),
                                                   temp_c, temp_f, outlet_powered())
     f.write(log_string)
+    print(log_string[:(log_string.__len__()-1)])
     time.sleep(1)
 
 f.close()
